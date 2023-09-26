@@ -23,7 +23,7 @@ const Card = ({ card }) => {
 
 
             if (isExist) {
-                swal("Error!", "You have already donated!", "error")
+                swal("Sorry!", "You have already donated!", "error")
             }
             else {
                 addDonation.push(...donateItem, card)
