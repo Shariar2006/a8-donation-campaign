@@ -4,6 +4,7 @@ import MainLayout from '../Layout/MainLayout';
 import Home from '../Page/Home/Home';
 import Statistics from '../Page/Statistics/Statistics';
 import Donation from '../Page/Donation/Donation';
+import SingleCard from '../SingleCard/SingleCard';
 
 const Router = createBrowserRouter([{
 
@@ -22,6 +23,11 @@ const Router = createBrowserRouter([{
         {
             path: "/statistics",
             element: <Statistics></Statistics>
+        },
+        {
+            path: "/cards/:id",
+            element: <SingleCard></SingleCard>,
+            loader: () => fetch('../assingmentApi.json')
         }
     ]
 

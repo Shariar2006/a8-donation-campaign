@@ -12,8 +12,7 @@ const Card = ({ card }) => {
                     <div className=" mx-4 mt-6  overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
                         <img
                             src={img}
-                            alt="img-blur-shadow"
-                            layout="fill"
+                            
                         />
                     </div>
                     <div className="p-6">
