@@ -1,39 +1,54 @@
 
 import React, { useEffect, useState } from 'react';
 import { PieChart } from 'react-minimal-pie-chart';
+import { useLoaderData } from 'react-router-dom';
 
 const Statistics = () => {
 
-    const [localStorageData, setLocalStorageData] = useState()
+    const [localStorageData, setLocalStorageData] = useState([])
+
+
+    const loaderData = useLoaderData()
+
+
+
 
     useEffect(() => {
 
         const donateItem = JSON.parse(localStorage.getItem('donate'))
-        
-        setLocalStorageData(donateItem)
+        if (donateItem === null) {
+            setLocalStorageData([])
+        }
+        else {
+            setLocalStorageData(donateItem)
+        }
+    }, [])
 
 
-     }, [])
+    const loaderDataLength = loaderData.length 
 
-     console.log(localStorageData)
-     
-
-    //  const redValue = localStorageData.length;
-    //  console.log(redValue)
-
+    
+    const redValue = localStorageData.length;
+    
+    const greenValue = loaderDataLength - redValue 
+    
     return (
-        <div>
+        <div className='flex items-center'>
             <PieChart className='w-1/3 mx-auto mt-16'
+
+                
                 data={[
-                    { title: 'One', value: 12, color: '#ff444a' },
-                    { title: 'Two', value: 2, color: '#00C49F' },
+                    { title: 'Total Donation', value: greenValue, color: '#ff444a' },
+                    { title: 'Your Donation', value: redValue, color: '#00C49F' },
                 ]}
                 label={({ dataEntry }) => `${Math.round(dataEntry.percentage)} %`}
+                
                 labelStyle={{
                     fill: 'white',
                     fontSize: '6px'
                 }}
-            />;
+            />
+            <p>  <span className='w-[100px] bg-[#ff444a] text-[#ff444a] rounded-full'>"""</span> Total donation</p>
         </div>
     );
 };

@@ -22,7 +22,8 @@ const Router = createBrowserRouter([{
         },
         {
             path: "/statistics",
-            element: <Statistics></Statistics>
+            element: <Statistics></Statistics>,
+            loader : () => fetch('../assingmentApi.json')
         },
         {
             path: "/cards/:id",
