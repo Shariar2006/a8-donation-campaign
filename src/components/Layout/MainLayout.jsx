@@ -7,7 +7,7 @@ const MainLayout = () => {
     const [open, setopen] = useState(false)
 
     return (
-        <div>
+        <div className='max-w-[1300px] mx-auto'>
             <nav className='flex justify-between items-center p-4 pr-24 shadow-md'>
                 <img src="https://i.ibb.co/z6Bq1XC/Logo.png" alt="" />
                 <div>
