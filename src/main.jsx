@@ -6,6 +6,6 @@ import Router from './components/Router/Router'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={<Router></Router>}></RouterProvider>
+    <RouterProvider router={Router}></RouterProvider>
   </React.StrictMode>,
 )
