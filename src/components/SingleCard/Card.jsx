@@ -45,7 +45,7 @@ const Card = ({ card }) => {
                         src={img}
                     />
                 </div>
-                <div className="p-6 pt-3 absolute mt-[209px] md:mt-[419px] lg:mt-[538px] md:h-10 lg:h-20 w-full bg-black/60">
+                <div className="p-6 pt-3 absolute mt-[541px] h-20 w-full bg-black/60">
                     <button style={{ backgroundColor: text_color }}
                         className="absolute -mt-3 lg:mt-1  w-[100px] lg:w-[180px] select-none rounded-lg p-1 lg:p-4  text-center align-middle font-sans text-[10px] lg:text-sm font-bold uppercase text-white"
                         onClick={addToDonation}
