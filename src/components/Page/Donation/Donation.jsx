@@ -41,7 +41,9 @@ const Donation = () => {
 
                         <div className='grid grid-cols-2 gap-5 my-5'>
                             {
-                                issee ? donate.map(donateCard => <DonationCard key={donateCard.id} donateCard={donateCard}></DonationCard>) :
+                                issee ? 
+                                donate.map(donateCard => <DonationCard key={donateCard.id} donateCard={donateCard}></DonationCard>) 
+                                :
                                     donate.slice(0, 4).map(donateCard => <DonationCard key={donateCard.id} donateCard={donateCard}></DonationCard>)
                             }
                         </div>

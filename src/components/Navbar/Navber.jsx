@@ -31,9 +31,7 @@ const Navber = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink
-                                to="/donation"
-                                className={({ isActive, isPending }) =>
+                            <NavLink to="/donation" className={({ isActive, isPending }) =>
                                     isPending ? "pending" : isActive ? "text-gray-300 lg:text-[#FF444A] underline" : ""
                                 }
                             >
